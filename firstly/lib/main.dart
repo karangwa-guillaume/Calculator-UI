@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 void main() {
-  runApp( 
-    MaterialApp(
+  runApp( MyWidget() );
+}
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Center(
@@ -12,15 +19,11 @@ void main() {
             ),
             backgroundColor: Colors.deepPurple[400],
             ),
-            body: const Center(
-              child: Image(
-                image: AssetImage('images/guillaume vote.jpg'),
+            body: const Center(            
+                  child: Text("Hello World!!"),
                 ),
-                 child: Text("Hello World!!"),
+                 backgroundColor: Colors.deepPurpleAccent,
               ),
-  backgroundColor: Colors.deepPurpleAccent,
-  ),
-  ),
   );
+  }
 }
-

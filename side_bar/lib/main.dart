@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:side_bar/NavBar.dart';
 import 'signup_page.dart';
 import 'login_page.dart';
+import 'main.dart';
 
 
 
@@ -200,7 +201,7 @@ class Navbar extends StatelessWidget {
   }
 }
 
-class  CalculatorPage extends StatefulWidget {
+class CalculatorPage extends StatefulWidget {
   @override
   _CalculatorPageState createState() => _CalculatorPageState();
 }
@@ -241,6 +242,15 @@ class _CalculatorPageState extends State<CalculatorPage> {
       appBar: AppBar(
         title: const Text('Calculator'),
         backgroundColor: Colors.pink,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+             Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => MyHomePage()),
+            ); // This will pop the current page and return to the previous page
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -256,17 +266,17 @@ class _CalculatorPageState extends State<CalculatorPage> {
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(labelText: 'Second Number'),
             ),
-           const SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
                   onPressed: () => _calculateResult('+'),
-                  child:const Text('+'),
+                  child: const Text('+'),
                 ),
                 ElevatedButton(
                   onPressed: () => _calculateResult('-'),
-                  child:const Text('-'),
+                  child: const Text('-'),
                 ),
                 ElevatedButton(
                   onPressed: () => _calculateResult('*'),
@@ -274,14 +284,14 @@ class _CalculatorPageState extends State<CalculatorPage> {
                 ),
                 ElevatedButton(
                   onPressed: () => _calculateResult('/'),
-                  child:const Text('/'),
+                  child: const Text('/'),
                 ),
               ],
             ),
-           const SizedBox(height: 20),
+            const SizedBox(height: 20),
             Text(
               'Result: $_result',
-              style:const TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             ),
           ],
         ),

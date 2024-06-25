@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_bar/main.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
@@ -153,26 +154,14 @@ class LoginPage extends StatelessWidget {
     );
 
     // Navigate to the home page after successful login.
-    Navigator.pushReplacement(
+   Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => HomePage()),
+      MaterialPageRoute(builder: (context) => MyHomePage()),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
-      body: Center(
-        child: const Text('Welcome to the Home Page!'),
-      ),
-    );
-  }
-}
+
 
 void main() {
   runApp(MaterialApp(

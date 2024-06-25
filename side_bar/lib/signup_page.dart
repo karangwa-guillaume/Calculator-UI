@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:side_bar/login_page.dart';
 
 class SignupPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
@@ -114,7 +115,7 @@ class SignupPage extends StatelessWidget {
     // Navigate back to the home page or any other page after successful signup.
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => HomePage()),
+      MaterialPageRoute(builder: (context) => LoginPage()),
     );
   }
 }

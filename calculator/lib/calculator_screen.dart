@@ -83,13 +83,13 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 
   Color getBtnColor(value){
     return [Btn.del,Btn.clr].contains(value)
-        ?Color.fromARGB(255, 222, 68, 7)
+        ?Color.fromARGB(255, 171, 68, 152)
         :[Btn.per,
         Btn.multiply,
         Btn.divide,
         Btn.substract,
         Btn.add,
         Btn.calculate
-        ].contains(value)?Colors.blueGrey:Colors.black87;
+        ].contains(value)?Color.fromARGB(255, 92, 172, 128):Colors.black87;
   }
 }

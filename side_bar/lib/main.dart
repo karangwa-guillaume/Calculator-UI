@@ -3,6 +3,9 @@ import 'package:side_bar/NavBar.dart';
 import 'signup_page.dart';
 import 'login_page.dart';
 import 'main.dart';
+import 'package:side_bar/home_page.dart';
+import 'package:side_bar/battery_page.dart';
+
 
 
 
